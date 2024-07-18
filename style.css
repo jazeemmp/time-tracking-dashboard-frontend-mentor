@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --work: hsl(15, 100%, 70%);
+  --play: hsl(195, 74%, 62%);
+  --study: hsl(348, 100%, 68%);
+  --exercise: hsl(145, 58%, 55%);
+  --social: hsl(264, 64%, 52%);
+  --self-care: hsl(43, 84%, 65%);
+  --verydarkblue: hsl(226, 43%, 10%);
+  --blue: hsl(235, 46%, 20%);
+  --orgblue: hsl(246, 80%, 60%);
+  --desaturatedblue: hsl(235, 39%, 44%);
+  --paleblue: hsl(236, 100%, 87%);
+  --ffamily: "Rubik", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #fff;
+  font-family: var(--ffamily);
+  background-color: var(--verydarkblue);
+  cursor: pointer;
+}
+.container {
+  display: flex;
+  gap: 20px;
+}
+.user {
+  background-color: var(--blue);
+  border-radius: 20px;
+  width: 260px;
+}
+.profile {
+  background-color: var(--orgblue);
+  border-radius: 20px;
+}
+.profile .contents {
+  padding: 30px;
+}
+.profile img {
+  width: 80px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  margin-bottom: 40px;
+}
+.profile .para {
+  font-weight: 200;
+  opacity: 80%;
+  font-size: 14px;
+}
+.profile .head {
+  font-weight: 200;
+  font-size: 3em;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+.menu .btn {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: start;
+  background: transparent;
+  color: var(--orgblue);
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+.menu .btn:hover{
+  color: #fff;
+  transform: scale(1.01);}
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+.work {
+  background-color: var(--work);
+}
+.play {
+  background-color: var(--play);
+}
+.study {
+  background-color: var(--study);
+}
+.exercise {
+  background-color: var(--exercise);
+}
+.social {
+  background-color: var(--social);
+}
+.self-care {
+  background-color: var(--self-care);
+}
+.card {
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  width: 250px;
+}
+.top-section {
+  height: 30%;
+}
+.top-section img {
+  position: absolute;
+  right: 10px;
+  top: -5px;
+  width: 60px;
+}
+.bottom-section {
+  position: relative;
+  z-index: 100;
+  bottom: 30px;
+  background-color: var(--blue);
+  padding: 20px;
+  border-radius: 20px;
+  transition: 1s;
+}
+.bottom-section:hover {
+  background-color: var(--desaturatedblue);
+  transform: translateY(-10px);
+}
+.bottom-section .category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bottom-section .category h4 {
+  font-size: 18px;
+  font-weight: 400;
+}
+.hours h1 {
+  font-size: 4em;
+  margin: 20px 0;
+  font-weight: 200;
+}
+.hours p {
+  color: var(--paleblue);
+  font-size: 0.9em;
+  margin-top: -10px;
+}
+.btn.active{
+  color: #fff;
+}
+@media only screen and (max-width: 600px) {
+  body{
+    height: auto;
+  }
+  .profile {
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container {
+    flex-direction: column;
+    width: 90%;
+    margin: 120px auto;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .card{
+    width: 100%;
+  }
+  .profile .head {
+    font-size: 2em;
+  }
+  .contents {
+    display: flex;
+  }
+  .profile img {
+    width: 60px;
+    margin: 0 20px;
+  }
+  .user{
+    width: 100%;
+  }
+  .menu{
+    font-size: 2em;
+  }
+  .menu {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .menu .btn {
+    font-size: 18px;
+  }
+  .hours{
+    display: flex;
+    justify-content: space-between;
+  }
+  .hours h1 {
+    font-size: 2em;
+    padding-bottom: 30px;
+    font-weight: 200;
+  }
+  .hours p {
+    font-size: 0.9em;
+    margin: 30px;
+  }
+  .top-section {
+    height: 50%;
+    border-radius: 30px;
+  }
+  
+}
