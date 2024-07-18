@@ -3,7 +3,7 @@ fetch("data.json")
   .then((response) => response.json())
   .then((data) => {
     datas = data;
-    getDaily();
+    getWeekly();
   })
   .catch((error) => {
     console.error("Error fetching the JSON data:", error);
